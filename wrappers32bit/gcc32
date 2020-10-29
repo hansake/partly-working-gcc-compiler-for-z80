@@ -1,0 +1,4 @@
+# Wrapper script to add the -m32 flag to gcc x86-64
+# when building a gcc 2.95.2 compiler for i686
+echo "wrapped command: gcc -m32 $@"
+gcc -m32 $@

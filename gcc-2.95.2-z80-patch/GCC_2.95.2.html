@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0043)http://gcc.gnu.org/gcc-2.95/gcc-2.95.2.html -->
+<HTML><HEAD><TITLE>GCC 2.95.2 - GNU Project - Free Software Foundation (FSF)</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content="MSHTML 5.50.4807.2300" name=GENERATOR></HEAD>
+<BODY text=black vLink=#551a8b aLink=red link=#0000ee bgColor=white>
+<H1 align=center>GCC 2.95.2</H1>
+<P>October 27, 1999 
+<P>The GNU project and the GCC developers are pleased to announce the release of 
+GCC version 2.95.2. GCC used to stand for the GNU C Compiler, but since the 
+compiler supports several other languages aside from C, it now stands for the 
+GNU Compiler Collection. 
+<P>This is a minor release to address several bugs in the GCC version 2.95.1 
+release. 
+<P>The -fstrict-aliasing is not enabled by default for GCC 2.95.2. While the 
+optimizations performed by -fstrict-aliasing are valid according to the C and 
+C++ standards, the optimization have caused some problems, particularly with old 
+non-conforming code. 
+<P>The GCC developers are experimenting with ways to warn users about code which 
+violates the C/C++ standards, but those warnings are not ready for widespread 
+use at this time. Rather than wait for those warnings the GCC developers have 
+chosen to disable -fstrict-aliasing by default for the GCC 2.95.2 release. 
+<P>We <B>strongly</B> encourage developers to find and fix code which violates 
+the C/C++ standards as -fstrict-aliasing may be enabled by default in future 
+releases. Use the option -fstrict-aliasing to re-enable these optimizations. 
+<P>
+<UL>
+  <LI>Generic bugfixes and improvements 
+  <UL>
+    <LI>Fix incorrectly optimized memory reference in global common 
+    subexpression elimination (GCSE) optimization pass. 
+    <LI>Fix code generation bug in regmove.c in which it could incorrectly 
+    change a "const" value. 
+    <LI>Fix bug in optimization of conditionals involving volatile memory 
+    references. 
+    <LI>Avoid over-allocation of stack space for some procedures. 
+    <LI>Fixed bug in the compiler which caused incorrect optimization of an 
+    obscure series of bit manipulations, shifts and arithmetic. 
+    <LI>Fixed register allocator bug which caused teTeX to be mis-compiled on 
+    Sparc targets. 
+    <LI>Avoid incorrect optimization of degenerate case statements for certain 
+    targets such as the ARM. 
+    <LI>Fix out of range memory reference in the jump optimizer. 
+    <LI>Avoid dereferencing null pointer in fix-header. 
+    <LI>Fix test for GCC specific features so that it is possible to bootstrap 
+    with gcc-2.6.2 and older versions of GCC. 
+    <LI>Fix typo in scheduler which could potentially cause out of range memory 
+    accesses. 
+    <LI>Avoid incorrect loop reversal which caused incorrect code for certain 
+    loops on PowerPC targets. 
+    <LI>Avoid incorrect optimization of switch statements on certain targets 
+    (for example the ARM). </LI></UL>
+  <LI>Platform specific bugfixes and improvements 
+  <UL>
+    <LI>Work around bug in Sun V5.0 compilers which caused bootstrap comparison 
+    failures on Sparc targets. 
+    <LI>Fix Sparc backend bug which caused aborts in final.c. 
+    <LI>Fix sparc-hal-solaris2* configuration fragments. 
+    <LI>Fix bug in sparc block profiling. 
+    <LI>Fix obscure code generation bug for the PARISC targets. 
+    <LI>Define __STDC_EXT__ for HPUX configurations. 
+    <LI>Various POWERPC64 code generation bugfixes. 
+    <LI>Fix abort for PPC targets using ELF (ex GNU/Linux). 
+    <LI>Fix collect2 problems for AIX targets. 
+    <LI>Correct handling of .file directive for PPC targets. 
+    <LI>Fix bug in fix_trunc x86 patterns. 
+    <LI>Fix x86 port to correctly pop the FP stack for functions that return 
+    structures in memory. 
+    <LI>Fix minor bug in strlen x86 pattern. 
+    <LI>Use stabs debugging instead of dwarf1 for x86-solaris targets. 
+    <LI>Fix template repository code to handle leading underscore in mangled 
+    names. 
+    <LI>Fix weak/weak alias support for OpenBSD. 
+    <LI>GNU/Linux for the ARM has C++ compatible include files. </LI></UL>
+  <LI>Language &amp; Runtime specific fixes. 
+  <UL>
+    <LI>Fix handling of constructor attribute in the C front-end which caused 
+    problems building the Chill runtime library on some targets. 
+    <LI>Fix minor problem merging type qualifiers in the C front-end. 
+    <LI>Fix aliasing bug for pointers and references (C/C++). 
+    <LI>Fix incorrect "non-constant initializer bug" when -traditional or 
+    -fwritable-strings is enabled. 
+    <LI>Fix build error for Chill front-end on SunOS. 
+    <LI>Do not complain about duplicate instantiations when using -frepo (C++) 
+    <LI>Fix array bounds handling in C++ front-end which caused problems with 
+    dwarf debugging information in some circumstances. 
+    <LI>Fix minor namespace problem. 
+    <LI>Fix problem linking java programs. </LI></UL></LI></UL>
+<P>The whole suite has been extensively <A 
+href="http://gcc.gnu.org/gcc-2.95/regress.html">regression tested</A> and <A 
+href="http://gcc.gnu.org/gcc-2.95/othertest.html">package tested</A>. It should 
+be reliable and suitable for widespread use. 
+<P>The GCC 2.95 release has several new optimizations, new targets, new 
+languages and other new features as compared to EGCS 1.1 or GCC 2.8. See the <A 
+href="http://gcc.gnu.org/gcc-2.95/features.html">new features</A> page for a 
+more complete list of new features found in the GCC 2.95 releases. 
+<P>The sources include installation instructions in both HTML and plaintext 
+forms in the <CODE>install</CODE> directory in the distribution. However, the 
+most up to date <A href="http://gcc.gnu.org/install/index.html">installation 
+instructions</A> and <A 
+href="http://gcc.gnu.org/gcc-2.95/buildstat.html">build/test status</A> are on 
+the web pages. We will update those pages as new information becomes available. 
+<P>The GCC developers would like to thank the numerous people that have 
+contributed new features, test results, bugfixes, etc to GCC. This <A 
+href="http://gcc.gnu.org/thanks.html">amazing group of volunteers</A> is what 
+makes GCC successful. 
+<P>And finally, we can't in good conscience fail to mention some <A 
+href="http://gcc.gnu.org/gcc-2.95/caveats.html">caveats</A> to using GCC 2.95.2. 
+
+<P>Download GCC 2.95.2 from the <A href="ftp://ftp.gnu.org/pub/gnu/gcc/">GNU FTP 
+server (ftp://ftp.gnu.org)</A> <BR>Download GCC 2.95.2 from the <A 
+href="ftp://gcc.gnu.org/pub/gcc/releases/index.html">GCC/EGCS FTP server 
+(ftp://gcc.gnu.org)</A> <BR><A href="http://www.gnu.org/order/ftp.html">Find a 
+GNU mirror site</A> <BR><A href="http://gcc.gnu.org/mirrors.html">Find a 
+GCC/EGCS mirror site</A> 
+<P>For additional information about GCC please see the <A 
+href="http://gcc.gnu.org/index.html">GCC project web server</A> or contact the 
+<A href="mailto:gcc@gcc.gnu.org">GCC development mailing list</A>. 
+<HR>
+
+<ADDRESS>
+<P>Please send FSF &amp; GNU inquiries &amp; questions to <A 
+href="mailto:gnu@gnu.org">gnu@gnu.org</A>. There are also <A 
+href="http://www.gnu.org/home.html#ContactInfo">other ways to contact</A> the 
+FSF.</P>
+<P>These pages are maintained by <A href="http://gcc.gnu.org/about.html">The GCC 
+team</A>.</P>
+<P>Please send comments on these web pages and GCC to <A 
+href="mailto:gcc@gcc.gnu.org">gcc@gcc.gnu.org</A>, send other questions to <A 
+href="mailto:gnu@gnu.org">gnu@gnu.org</A>.</P>
+<P>Copyright (C) Free Software Foundation, Inc., 59 Temple Place - Suite 330, 
+Boston, MA 02111, USA.</P>
+<P>Verbatim copying and distribution of this entire article is permitted in any 
+medium, provided this notice is preserved.</P><!-- IGNORE DIFF -->
+<P>Last modified 2001-08-24.</P></ADDRESS></BODY></HTML>

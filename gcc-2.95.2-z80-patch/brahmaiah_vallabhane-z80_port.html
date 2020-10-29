@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0055)http://gcc.gnu.org/ml/gcc-patches/2001-05/msg01790.html -->
+<!-- MHonArc v2.4.7 --><!--X-Subject: z80 port --><!--X-From-R13: oenuznvnu inyynounarav <ioenuznvnuNlnubb.pbz> --><!--X-Date: 25 May 2001 14:18:42 &#45;0000 --><!--X-Message-Id: 20010525141834.14569.qmail@web3105.mail.yahoo.com --><!--X-Content-Type: text/plain --><!--X-Head-End--><HTML><HEAD><TITLE>brahmaiah vallabhane - z80 port</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 5.50.4807.2300" name=GENERATOR></HEAD>
+<BODY><!--X-Body-Begin--><!--X-User-Header--><!--htdig_noindex-->
+<P>This is the mail archive of the <TT>gcc-patches@gcc.gnu.org</TT> mailing list 
+for the <A href="http://gcc.gnu.org/">GCC project</A>. <!--/htdig_noindex--><!--X-User-Header-End--><!--X-TopPNI--><!--htdig_noindex-->
+<HR>
+
+<TABLE border=0>
+  <TBODY>
+  <TR>
+    <TH align=left>Index Nav:</TH>
+    <TD colSpan=2>[<A 
+      href="http://gcc.gnu.org/ml/gcc-patches/2001-05/index.html#01790">Date&nbsp;Index</A>] 
+      [<A 
+      href="http://gcc.gnu.org/ml/gcc-patches/2001-05/subjects.html#01790">Subject&nbsp;Index</A>] 
+      [<A 
+      href="http://gcc.gnu.org/ml/gcc-patches/2001-05/authors.html#01790">Author&nbsp;Index</A>] 
+      [<A 
+      href="http://gcc.gnu.org/ml/gcc-patches/2001-05/threads.html#01790">Thread&nbsp;Index</A>] 
+    </TD></TR>
+  <TR>
+    <TH align=left>Message Nav:</TH>
+    <TD>[<A 
+      href="http://gcc.gnu.org/ml/gcc-patches/2001-05/msg01789.html">Date&nbsp;Prev</A>]&nbsp;[<A 
+      href="http://gcc.gnu.org/ml/gcc-patches/2001-05/msg01791.html">Date&nbsp;Next</A>]</TD>
+    <TD>[<A 
+      href="http://gcc.gnu.org/ml/gcc-patches/2001-05/msg01789.html">Thread&nbsp;Prev</A>]&nbsp;[<A 
+      href="http://gcc.gnu.org/ml/gcc-patches/2001-05/msg01788.html">Thread&nbsp;Next</A>]</TD></TR></TBODY></TABLE><!--/htdig_noindex--><!--X-TopPNI-End--><!--X-MsgBody--><!--X-Subject-Header-Begin-->
+<H1>z80 port</H1><!--X-Subject-Header-End--><!--X-Head-of-Message-->
+<UL>
+  <LI><EM>To</EM>: gcc-patches at gcc dot gnu dot org 
+  <LI><EM>Subject</EM>: z80 port 
+  <LI><EM>From</EM>: brahmaiah vallabhaneni &lt;vbrahmaiah at yahoo dot com&gt; 
+  <LI><EM>Date</EM>: Fri, 25 May 2001 07:18:34 -0700 (PDT) </LI></UL><!--X-Head-of-Message-End--><!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End--><!--X-Body-of-Message--><PRE>Hi
+I am Brahmaiah, working for gcc z80 port. This
+exercise
+is part of my learning interest. I am giving the
+status of the port below.
+
+
+
+Z80 port status:
+-----------------
+It can handle
+
+1) Move operations (loads/stores).
+2)Arithmetic operations. (Add, Subtract,shift and not
+mul/div (libcalls))
+3)Logical operations (AND,IOR, XOR and Shifts)
+4) Compares and braches
+
+  I am glad to say that the basic port is up.
+
+In z80.h The MAX_FIXEDMODE_SIZE is 32. (long, long
+long and long double are also
+32 bits).
+
+The work needs to be done on:
+-------------------------------
+1) Getting optimized code. When compiled with -Os cc1
+aborts because of some
+reasons. Need to fix them
+2) COST macros need to be implemented with suitable
+values. As of now I am
+having some default values.
+3) Need to add some peep hole optimizations (if
+applicable).
+4) The compiler's functionality is yet to be  tested.
+I have some test programs,
+I verified the code with them.
+(Rather I am not botherd much about functionality now,
+It should not break
+when compiling some code.)
+
+
+   Hoping some body  could help me in fixing the
+problems.  This is my first project on compilers.
+So, if some body could go through my code and suggest
+some modifications, their help would be highly
+appreciated. I will submit my patch in few days
+time. (next week).
+
+ 
+
+
+Currently I am going through the contributors.htm.
+It's not clear
+as to what forms I have to fill and also to whom I
+have to submit. Can some body point me in the right
+direction on this. 
+
+  
+
+
+And one more point is the starting point of my work is
+m68hc11 port. The
+approach has been adopted from that port.
+
+
+
+Thanks and regards
+
+V.Brahmaiah.
+
+
+
+__________________________________________________
+Do You Yahoo!?
+Yahoo! Auctions - buy the things you want at great prices
+<A href="http://auctions.yahoo.com/">http://auctions.yahoo.com/</A>
+
+</PRE><!--X-Body-of-Message-End--><!--X-MsgBody-End--><!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End--><!--X-References--><!--X-References-End--><!--X-BotPNI--><!--htdig_noindex-->
+<TABLE border=0>
+  <TBODY>
+  <TR>
+    <TH align=left>Index Nav:</TH>
+    <TD colSpan=2>[<A 
+      href="http://gcc.gnu.org/ml/gcc-patches/2001-05/index.html#01790">Date&nbsp;Index</A>] 
+      [<A 
+      href="http://gcc.gnu.org/ml/gcc-patches/2001-05/subjects.html#01790">Subject&nbsp;Index</A>] 
+      [<A 
+      href="http://gcc.gnu.org/ml/gcc-patches/2001-05/authors.html#01790">Author&nbsp;Index</A>] 
+      [<A 
+      href="http://gcc.gnu.org/ml/gcc-patches/2001-05/threads.html#01790">Thread&nbsp;Index</A>] 
+    </TD></TR>
+  <TR>
+    <TH align=left>Message Nav:</TH>
+    <TD>[<A 
+      href="http://gcc.gnu.org/ml/gcc-patches/2001-05/msg01789.html">Date&nbsp;Prev</A>]&nbsp;[<A 
+      href="http://gcc.gnu.org/ml/gcc-patches/2001-05/msg01791.html">Date&nbsp;Next</A>]</TD>
+    <TD>[<A 
+      href="http://gcc.gnu.org/ml/gcc-patches/2001-05/msg01789.html">Thread&nbsp;Prev</A>]&nbsp;[<A 
+      href="http://gcc.gnu.org/ml/gcc-patches/2001-05/msg01788.html">Thread&nbsp;Next</A>]</TD></TR></TBODY></TABLE><!--/htdig_noindex--><!--X-BotPNI-End--><!--X-User-Footer--><!--X-User-Footer-End--></BODY></HTML>
