@@ -10,4 +10,4 @@ on a Linux Mint x86_64 laptop.
 
 If the patched gcc compiler is built as a 32 bit i386 program it does at least not crash.
 However the z80 assembler code generates namy instructions that are not valid for z80.
-(The code is more valid for Zilog eZ80 but z80-elf-as with the -ez80 flag still generates errors.)
+(The code is more valid for Zilog eZ80 but z80-elf-as with the -ez80 flag still gives errors.)
