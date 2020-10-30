@@ -26,7 +26,7 @@ every other C code.
 
 The script: ./makeandtest_gcc_i686.sh will build and test the compiler for a 32 bit i686
 host that generates code for a 32 bit i686 target. This was created to be able to find
-out which workarounds that is needed to be able to build the compiler for a 32 bit i686
+out which workarounds that are needed to be able to build the compiler for a 32 bit i686
 host that generates code for the z80.
 
 The other scripts: ./clearall_gcc_z80_i686.sh, ./clearall_gcc_z80.sh and ./clearall_gcc_i686.sh
