@@ -8,7 +8,7 @@ list at 25 Jun 2001: http://gcc.gnu.org/ml/gcc-patches/2001-06/msg01546/gcc-2.95
 Just out of curiosity I have compiled this code with gcc 9.3.0 on a Linux Mint 20 x86_64 laptop
 to have a look at the z80 assembler code that is generated.
 
-If the patched gcc compiler is built as a 32 bit i686 program it does at least not crash.
+If the patched gcc compiler is built as a 32 bit i686 program it dgit diff master origin/masteroes at least not crash.
 However the z80 assembler code generates namy instructions that are not valid for z80.
 (The code is more valid for Zilog eZ80 but z80-elf-as with the -ez80 flag still gives errors.)
 
@@ -34,7 +34,7 @@ will remove the created build and install directories and log files.
 
 ## Patch of patch
 
-When first trying to build the cross compiler it would always crash in cc1 with signal 11.
+When first trying to build the cross compiler it did always crash in cc1 with signal 11.
 The problem seems to be that the variable "base" is not initialized in ../../gcc-2.95.2_z80/gcc/config/z80/z80.c, line 224:
 
       
