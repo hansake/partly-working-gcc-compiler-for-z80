@@ -10,7 +10,7 @@ to have a look at the z80 assembler code that is generated.
 
 If the patched gcc compiler is built as a 32 bit i686 program it dgit diff master origin/masteroes at least not crash.
 However the z80 assembler code generates namy instructions that are not valid for z80.
-(The code is more valid for Zilog eZ80 but z80-elf-as with the -ez80 flag still gives errors.)
+(The code is more valid for Zilog eZ80 but z80-elf-as with the -ez80 flag still gives errors on the syntax.)
 
 ## Scripts for building the compiler
 
