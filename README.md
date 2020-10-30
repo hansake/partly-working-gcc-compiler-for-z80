@@ -27,5 +27,5 @@ host that generates code for a 32 bit i686 target. This was created to be able t
 out which workarounds that is needed to be able to build the compiler for a 32 bit i686
 host that generates code for the z80.
 
-The other scripts: ./clearall_gcc_z80_i686.sh, ./clearall_gcc_z80.sh and clearall_gcc_i686.sh
+The other scripts: ./clearall_gcc_z80_i686.sh, ./clearall_gcc_z80.sh and ./clearall_gcc_i686.sh
 will remove the created build and install directories and log files.
