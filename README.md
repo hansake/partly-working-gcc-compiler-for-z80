@@ -35,7 +35,7 @@ will remove the created build and install directories and log files.
 ## Patch of patch
 
 When first trying to build the cross compiler it would always crash in cc1 with signal 11.
-The problem seems to be that the variable "base" is not initialized in ../../gcc-2.95.2_z80/gcc/config/z80/z80.c:
+The problem seems to be that the variable "base" is not initialized in ../../gcc-2.95.2_z80/gcc/config/z80/z80.c, line 224:
 
       
     case REG:
@@ -49,7 +49,7 @@ should most probably be:
         return REGNO_OK_FOR_BASE_P2 (REGNO (operand), strict);
 
 
-copy-paste error from previous line? 
+copy-paste error from previous case statement? 
 
 ## Future plans maybe...
 
