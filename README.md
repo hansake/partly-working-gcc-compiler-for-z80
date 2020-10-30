@@ -12,6 +12,8 @@ If the patched gcc compiler is built as a 32 bit i686 program it does at least n
 However the z80 assembler code generates namy instructions that are not valid for z80.
 (The code is more valid for Zilog eZ80 but z80-elf-as with the -ez80 flag still gives errors.)
 
+## Scripts for building the compiler
+
 As the building of the compiler is not quite straight forward I created some scripts
 for configuration, build (make), install to a temporary directory and simple tests.
 
@@ -29,6 +31,10 @@ host that generates code for the z80.
 
 The other scripts: ./clearall_gcc_z80_i686.sh, ./clearall_gcc_z80.sh and ./clearall_gcc_i686.sh
 will remove the created build and install directories and log files.
+
+## Patch of patch
+
+## Future plans maybe...
 
 I will not try to make this version of the z80 compiler generate correct assembler code.
 If I ever will make a gcc compiler for z80 I will base it on a version of gcc that is the most recent at that time.
