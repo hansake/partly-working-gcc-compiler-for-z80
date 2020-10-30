@@ -30,5 +30,5 @@ host that generates code for the z80.
 The other scripts: ./clearall_gcc_z80_i686.sh, ./clearall_gcc_z80.sh and ./clearall_gcc_i686.sh
 will remove the created build and install directories and log files.
 
-I will most probably try to make this version of the z80 compiler to generate correct assembler code.
-If I ever will make a gcc compiler for z80 I will base it on the moste recent version of gcc.
+I will not try to make this version of the z80 compiler generate correct assembler code.
+If I ever will make a gcc compiler for z80 I will base it on a version of gcc that is the most recent at that time.
