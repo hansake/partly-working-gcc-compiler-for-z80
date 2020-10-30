@@ -1,3 +1,5 @@
+Note: written by V.Brahmaiah for the original patch
+
 This file describes the gcc z80 port status:
 
 I worked with the source tree gcc-2.95.2. This work is done as a part my 
