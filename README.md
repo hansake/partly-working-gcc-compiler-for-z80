@@ -1,5 +1,5 @@
 # partly-working-gcc-compiler-for-z80
-A not yet really working compiler for z80 built on gcc 2.95.2
+A not yet really working compiler for z80 built on gcc 2.95.2.
 
 This gcc 2.95.2 compiler is patched to generate assembler code for z80.
 The patch is made by V.Brahmaiah and send in a mail to the gcc-patches@gcc.gnu.org
