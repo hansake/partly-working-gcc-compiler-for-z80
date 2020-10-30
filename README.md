@@ -34,6 +34,26 @@ will remove the created build and install directories and log files.
 
 ## Patch of patch
 
+The problem seems to be that the variable "base" is not initialized in ../../gcc-2.95.2_z80/gcc/config/z80/z80.c:
+
+...
+      
+    case REG:
+        return REGNO_OK_FOR_BASE_P2 (REGNO (base), strict);
+
+...
+
+should most probably be:
+
+...
+      
+    case REG:
+        return REGNO_OK_FOR_BASE_P2 (REGNO (operand), strict);
+
+...
+
+Copy-paste error? 
+
 ## Future plans maybe...
 
 I will not try to make this version of the z80 compiler generate correct assembler code.
